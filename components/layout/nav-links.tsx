@@ -32,7 +32,9 @@ export function NavLinks({
     <nav className={className} aria-label={ariaLabel}>
       {items.map((item) => {
         const isActive =
-          item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+          item.href === "/"
+            ? pathname === "/"
+            : pathname === item.href || pathname.startsWith(`${item.href}/`)
 
         return (
           <Link
