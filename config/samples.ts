@@ -29,10 +29,4 @@ export const samples: SampleItem[] = [
     description: "추천 배지와 기능 목록이 들어간 3단 요금제 카드입니다.",
     tags: ["마케팅", "카드"],
   },
-  {
-    slug: "blog",
-    title: "블로그",
-    description: "글 카드 목록과 페이지네이션으로 구성한 게시판 화면입니다.",
-    tags: ["목록", "페이지네이션"],
-  },
 ]

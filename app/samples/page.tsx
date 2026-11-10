@@ -18,7 +18,6 @@ const iconMap: Record<string, LucideIcon> = {
   login: LogIn,
   dashboard: LayoutDashboard,
   pricing: CreditCard,
-  blog: Newspaper,
 }
 
 /**
