@@ -38,7 +38,6 @@ npx shadcn@latest add <component>   # shadcn/ui 컴포넌트 추가
 ### 단일 출처 설정 (두 곳을 함께 봐야 하는 부분)
 
 - **내비게이션**: `config/site.ts`의 `siteConfig.mainNav`가 헤더(`site-header` → `nav-links`), 모바일 메뉴(`mobile-nav`), 푸터(`site-footer`)에 모두 반영됩니다. 메뉴를 바꿀 때 컴포넌트를 따로 수정할 필요는 없습니다.
-- **샘플 목록**: `config/samples.ts`의 `samples` 배열이 `/samples` 카드 목록의 단일 출처입니다. 다만 카드 아이콘은 `app/samples/page.tsx`의 `iconMap`(slug → lucide 아이콘)에서 매핑하므로, 새 샘플을 추가하면 **두 파일을 모두** 수정해야 합니다. 샘플 상세는 `app/samples/<slug>/page.tsx`에 각각 있습니다.
 
 ### 컴포넌트 계층
 

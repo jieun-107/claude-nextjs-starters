@@ -15,7 +15,6 @@ export const siteConfig = {
   mainNav: [
     { title: "홈", href: "/" },
     { title: "컴포넌트", href: "/components" },
-    { title: "샘플", href: "/samples" },
     { title: "소개", href: "/about" },
   ] satisfies NavItem[],
 }

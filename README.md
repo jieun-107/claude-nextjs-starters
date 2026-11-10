@@ -43,7 +43,6 @@ components/
   common/               # 앱 공통 조합: ThemeToggle, ContactForm
   providers/            # 전역 프로바이더: ThemeProvider
 config/site.ts          # 사이트명, 설명, 네비게이션 메뉴
-config/samples.ts       # 샘플 페이지 목록 (/samples 카드의 단일 출처)
 lib/utils.ts            # cn 유틸 (cn 패키지 재export)
 ```
 
