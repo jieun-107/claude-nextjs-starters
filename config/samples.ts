@@ -12,12 +12,6 @@ export type SampleItem = {
 
 export const samples: SampleItem[] = [
   {
-    slug: "login",
-    title: "로그인",
-    description: "이메일·비밀번호 입력과 zod 검증을 적용한 로그인 폼입니다.",
-    tags: ["폼", "검증"],
-  },
-  {
     slug: "dashboard",
     title: "대시보드",
     description: "통계 카드와 최근 주문 테이블로 구성한 관리자 화면입니다.",

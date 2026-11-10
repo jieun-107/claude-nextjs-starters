@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CreditCard, LayoutDashboard, LogIn, Newspaper, type LucideIcon } from "lucide-react"
+import { CreditCard, LayoutDashboard, Newspaper, type LucideIcon } from "lucide-react"
 
 import { Container } from "@/components/layout/container"
 import { PageHeader } from "@/components/layout/page-header"
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 
 // slug별 아이콘 (데이터는 config/samples.ts, 표현용 아이콘은 여기서 매핑)
 const iconMap: Record<string, LucideIcon> = {
-  login: LogIn,
   dashboard: LayoutDashboard,
   pricing: CreditCard,
 }
