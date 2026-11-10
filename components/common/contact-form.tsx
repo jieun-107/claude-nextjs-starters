@@ -55,7 +55,10 @@ export function ContactForm() {
   async function onSubmit(values: ContactValues) {
     // TODO: 서버 액션 또는 API 호출로 교체
     await new Promise((resolve) => setTimeout(resolve, 800))
-    console.info("문의 전송 데이터", values)
+    // 개발 환경에서만 입력값을 출력합니다 (실제 연동 시 이 로그도 함께 제거)
+    if (process.env.NODE_ENV === "development") {
+      console.info("문의 전송 데이터", values)
+    }
     toast.success("문의가 접수되었습니다.")
     form.reset(defaultValues)
   }
