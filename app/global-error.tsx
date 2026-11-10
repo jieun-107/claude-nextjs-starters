@@ -5,7 +5,7 @@ import "./globals.css"
 /**
  * 루트 레이아웃까지 실패했을 때 쓰는 전역 에러 페이지
  * 루트 레이아웃을 대체하므로 자체 <html>과 <body>를 가져야 합니다.
- * 테마 클래스가 적용되지 않으므로 OS 설정(dark:)을 따릅니다.
+ * 테마 클래스(.dark)가 없으므로 항상 :root의 라이트 토큰이 적용됩니다.
  */
 export default function GlobalError({
   error,
