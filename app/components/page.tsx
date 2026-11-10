@@ -26,6 +26,7 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -260,10 +261,13 @@ export default function ComponentsPage() {
               <DropdownMenu>
                 <DropdownMenuTrigger render={<Button variant="outline" />}>메뉴</DropdownMenuTrigger>
                 <DropdownMenuContent align="start">
-                  <DropdownMenuLabel>내 계정</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>프로필</DropdownMenuItem>
-                  <DropdownMenuItem>설정</DropdownMenuItem>
+                  {/* Label은 반드시 DropdownMenuGroup 안에서 사용해야 함 (Base UI 요구사항) */}
+                  <DropdownMenuGroup>
+                    <DropdownMenuLabel>내 계정</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>프로필</DropdownMenuItem>
+                    <DropdownMenuItem>설정</DropdownMenuItem>
+                  </DropdownMenuGroup>
                 </DropdownMenuContent>
               </DropdownMenu>
             </CardContent>
