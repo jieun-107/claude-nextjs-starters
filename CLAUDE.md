@@ -43,7 +43,7 @@ npx shadcn@latest add <component>   # shadcn/ui 컴포넌트 추가
 
 - `components/ui/`: shadcn/ui 원본 (style `base-nova`, `components.json` 참고). 직접 수정은 최소화합니다.
 - **중요**: 이 컴포넌트들은 Radix가 아니라 `@base-ui/react` 기반입니다. 합성(composition)은 `asChild` 대신 `render` prop을 씁니다. 예: `<BreadcrumbLink render={<Link href=... />}>`.
-- `components/layout/`: 사이트 골격 (Container, SiteHeader, MobileNav, SiteFooter, PageHeader). `components/common/`: 앱 공통 조합 (ThemeToggle, ContactForm). `components/samples/`: 샘플 페이지 전용 컴포넌트. `components/providers/`: 전역 프로바이더 (ThemeProvider).
+- `components/layout/`: 사이트 골격 (Container, SiteHeader, MobileNav, SiteFooter, PageHeader). `components/common/`: 앱 공통 조합 (ThemeToggle, ContactForm). `components/providers/`: 전역 프로바이더 (ThemeProvider).
 - 클라이언트 컴포넌트는 파일 최상단에 `"use client"`를 둡니다 (폼, 테마, 에러 경계 등).
 
 ### 스타일과 테마
@@ -55,9 +55,9 @@ npx shadcn@latest add <component>   # shadcn/ui 컴포넌트 추가
 
 ### 폼과 검증
 
-- 폼은 `react-hook-form` + `zod` v4 + `@hookform/resolvers`를 조합합니다. 스키마에서 `z.infer`로 폼 값 타입을 얻고, 필드는 `components/ui/field.tsx`의 `Field*` 조합 컴포넌트로 렌더링합니다 (예: `components/common/contact-form.tsx`, `components/samples/login-form.tsx`).
+- 폼은 `react-hook-form` + `zod` v4 + `@hookform/resolvers`를 조합합니다. 스키마에서 `z.infer`로 폼 값 타입을 얻고, 필드는 `components/ui/field.tsx`의 `Field*` 조합 컴포넌트로 렌더링합니다 (예: `components/common/contact-form.tsx`).
 - 토스트 알림은 `sonner`이며 루트 레이아웃의 `<Toaster />`에 의존합니다.
 
 ### 현재 상태
 
-- 대부분의 페이지(`/`, `/components`, `/about`, `/samples/*`)는 데모·샘플용 정적 화면입니다. 실제 API 라우트, DB, 인증 로직은 없습니다. `ContactForm`과 `LoginForm`도 클라이언트 검증 후 토스트를 띄우는 수준입니다.
+- 대부분의 페이지(`/`, `/components`, `/about`)는 데모용 정적 화면입니다. 실제 API 라우트, DB, 인증 로직은 없습니다. `ContactForm`은 클라이언트 검증 후 토스트를 띄우는 수준입니다.
